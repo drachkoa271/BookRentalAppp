@@ -1,4 +1,41 @@
-﻿@page
-@model BookRentalApp.Views.Loans.EditModel
+﻿@model BookRentalApp.Models.Loan
+
 @{
+    ViewData["Title"] = "Edit Loan";
 }
+
+<h2>Edit Loan</h2>
+
+<h4>Loan</h4>
+<hr />
+<div>
+    <form asp-action="Edit">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="BookId" class="control-label"></label>
+            <input asp-for="BookId" class="form-control" />
+            <span asp-validation-for="BookId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserId" class="control-label"></label>
+            <input asp-for="UserId" class="form-control" />
+            <span asp-validation-for="UserId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LoanDate" class="control-label"></label>
+            <input asp-for="LoanDate" class="form-control" />
+            <span asp-validation-for="LoanDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ReturnDate" class="control-label"></label>
+            <input asp-for="ReturnDate" class="form-control" />
+            <span asp-validation-for="ReturnDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
