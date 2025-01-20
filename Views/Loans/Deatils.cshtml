@@ -1,4 +1,42 @@
-﻿@page
-@model BookRentalApp.Views.Loans.DeatilsModel
+﻿@model BookRentalApp.Models.Loan
+
 @{
+    ViewData["Title"] = "Loan Details";
 }
+
+<h2>Loan Details</h2>
+
+<div>
+    <h4>Loan</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Book ID
+        </dt>
+        <dd class="col-sm-10">
+            @Model.BookId
+        </dd>
+        <dt class="col-sm-2">
+            User ID
+        </dt>
+        <dd class="col-sm-10">
+            @Model.UserId
+        </dd>
+        <dt class="col-sm-2">
+            Loan Date
+        </dt>
+        <dd class="col-sm-10">
+            @Model.LoanDate
+        </dd>
+        <dt class="col-sm-2">
+            Return Date
+        </dt>
+        <dd class="col-sm-10">
+            @Model.ReturnDate
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
