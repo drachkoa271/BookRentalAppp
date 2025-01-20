@@ -9,6 +9,6 @@ namespace BookRentalApp.Data
         Author GetById(int id);
         void Add(Author author);
         void Update(Author author);
-        void Delete(Author author);
+        void Delete(int id);
     }
 }
